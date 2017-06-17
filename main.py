@@ -69,7 +69,7 @@ form = """
                 display: block;
                 margin: 0 auto;
                 font-size: 16px;
-                text-align: center;
+                text-align: left;
                 font-weight: 200;
                 padding-bottom: 20px;
                 font-family: 'Roboto', 'Helvetica', sans-serif;
