@@ -8,29 +8,75 @@ form = """
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <style>
+
+            # form {{
+            #     background-color: #eee;
+            #     padding: 20px;
+            #     margin: 0 auto;
+            #     width: 540px;
+            #     font: 16px sans-serif;
+            #     border-radius: 10px;
+            # }}
+            #
+            # textarea {{
+            #     margin: 10px 0;
+            #     width: 540px;
+            #     height: 120px;
+            # }}
+
             form {{
                 background-color: #eee;
                 padding: 20px;
                 margin: 0 auto;
                 width: 540px;
                 font: 16px sans-serif;
+                font-family: 'Roboto', sans-serif;
                 border-radius: 10px;
             }}
+
             textarea {{
                 margin: 10px 0;
                 width: 540px;
                 height: 120px;
             }}
+
+            .wrapper {{
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                padding-top: 50px;
+            }}
+
+            h1 {{
+                font-weight: 300;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+            }}
+
+            p {{
+                width: 500px;
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                padding: 10px 0 50px 0;
+            }}
+
         </style>
     </head>
     <body>
-        <form action ="/" method="POST">
-            <label for "rot">Rotate by:</label>
-            <input type="text" id="rot" name="rot" value="0">
-            <textarea name="text">{0}</textarea>
-            <input type="submit" value="Submit Query">
-        </form>
+        <div class="wrapper">
+            <h1>Web Caesar Cipher</h1>
+            <p>A web application that utilizes the caesar cipher. Type in a message and the amount of rotation to encrypt your message!</p>
+            <form action ="/" method="POST">
+                <label for "rot">Rotate by:</label>
+                <input type="text" id="rot" name="rot" value="0">
+                <textarea name="text">{0}</textarea>
+                <input type="submit" value="Submit Query">
+            </form>
+        </div>
     </body>
 </html>
 """
