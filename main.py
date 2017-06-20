@@ -8,8 +8,11 @@ form = """
 <!DOCTYPE html>
 <html>
     <head>
+        # added font
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <style>
+
+            # original styles
 
             # form {{
             #     background-color: #eee;
@@ -67,6 +70,7 @@ form = """
         </style>
     </head>
     <body>
+        # added wrapper, title, and description of application.
         <div class="wrapper">
             <h1>Web Caesar Cipher</h1>
             <p>A web application that utilizes the caesar cipher. Type in a message and the amount of rotation to encrypt your message!</p>
