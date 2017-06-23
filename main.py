@@ -31,41 +31,71 @@ form = """
             # }}
 
             form {{
-                background-color: #eee;
+                width: 540px;
                 padding: 20px;
                 margin: 0 auto;
-                width: 540px;
-                font: 16px sans-serif;
-                font-family: 'Roboto', sans-serif;
                 border-radius: 10px;
+                font: 16px sans-serif;
+                background-color: #90AFC5;
+                font-family: 'Roboto', sans-serif;
             }}
 
             textarea {{
-                margin: 10px 0;
                 width: 540px;
                 height: 120px;
-            }}
-
-            .wrapper {{
-                width: 100%;
-                display: block;
-                margin: 0 auto;
-                padding-top: 50px;
+                margin: 10px 0;
             }}
 
             h1 {{
                 font-weight: 300;
+                padding-top: 75px;
                 text-align: center;
                 font-family: 'Roboto', sans-serif;
             }}
 
             p {{
                 width: 500px;
+                color: #888;
                 display: block;
                 margin: 0 auto;
                 text-align: center;
+                padding-bottom: 40px;
                 font-family: 'Roboto', sans-serif;
-                padding: 10px 0 50px 0;
+            }}
+
+            input[type=text], select {{
+                width: 100%;
+                margin: 8px 0;
+                padding: 12px 20px;
+                border-radius: 4px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }}
+
+            textarea {{
+                width: 100%;
+                margin: 8px 0;
+                border-radius: 4px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }}
+
+            input[type=submit] {{
+                width: 100%;
+                color: white;
+                border: none;
+                margin: 8px 0;
+                cursor: pointer;
+                padding: 14px 20px;
+                border-radius: 4px;
+                background-color: #2A3132;
+            }}
+
+            input[type=submit]:hover {{
+                background-color: #336B87;
             }}
 
         </style>
@@ -74,21 +104,15 @@ form = """
 
     <body>
 
-        <!--added wrapper, title, and description of application.-->
-        <div class="wrapper">
+        <h1>Web Caesar</h1>
+        <p>A web application that utilizes the caesar cipher. Type in a message and the amount of rotation to encrypt your message!</p>
 
-            <h1>Web Caesar Cipher</h1>
-
-            <p>A web application that utilizes the caesar cipher. Type in a message and the amount of rotation to encrypt your message!</p>
-
-            <form action ="/" method="POST">
-                <label for "rot">Rotate by:</label>
-                <input type="text" id="rot" name="rot" value="0">
-                <textarea name="text">{0}</textarea>
-                <input type="submit" value="Submit Query">
-            </form>
-
-        </div>
+        <form action ="/" method="POST">
+            <label for "rot">Rotate by:</label>
+            <input type="text" id="rot" name="rot" value="0">
+            <textarea name="text">{0}</textarea>
+            <input type="submit" value="Encrypt">
+        </form>
 
     </body>
 
