@@ -10,25 +10,8 @@ form = """
 <html>
 
     <head>
-        <!-- added font -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <style>
-
-            # original styles
-            # form {{
-            #     background-color: #eee;
-            #     padding: 20px;
-            #     margin: 0 auto;
-            #     width: 540px;
-            #     font: 16px sans-serif;
-            #     border-radius: 10px;
-            # }}
-            #
-            # textarea {{
-            #     margin: 10px 0;
-            #     width: 540px;
-            #     height: 120px;
-            # }}
 
             form {{
                 width: 540px;
@@ -41,9 +24,14 @@ form = """
             }}
 
             textarea {{
-                width: 540px;
-                height: 120px;
-                margin: 10px 0;
+                width: 100%;
+                height: 150px;
+                margin: 8px 0;
+                border-radius: 4px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
             }}
 
             h1 {{
@@ -68,16 +56,6 @@ form = """
                 margin: 8px 0;
                 padding: 12px 20px;
                 border-radius: 4px;
-                display: inline-block;
-                border: 1px solid #ccc;
-                box-sizing: border-box;
-            }}
-
-            textarea {{
-                width: 100%;
-                margin: 8px 0;
-                border-radius: 4px;
-                padding: 12px 20px;
                 display: inline-block;
                 border: 1px solid #ccc;
                 box-sizing: border-box;
