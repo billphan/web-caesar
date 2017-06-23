@@ -10,16 +10,31 @@ form = """
 <html>
 
     <head>
+
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
         <style>
 
-            form {{
+            body {{
+                background-color: #fff;
+            }}
+
+            div.wrapper {{
+                top: 40%;
+                left: 50%;
                 width: 540px;
-                padding: 20px;
+                display: block;
                 margin: 0 auto;
+                position: fixed;
+                transform: translate(-50%, -50%)
+            }}
+
+            form {{
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                font-size: 16px;
                 border-radius: 10px;
-                font: 16px sans-serif;
-                background-color: #90AFC5;
                 font-family: 'Roboto', sans-serif;
             }}
 
@@ -29,26 +44,42 @@ form = """
                 margin: 8px 0;
                 border-radius: 4px;
                 padding: 12px 20px;
-                display: inline-block;
                 border: 1px solid #ccc;
                 box-sizing: border-box;
             }}
 
             h1 {{
+                color: #336B87;
                 font-weight: 300;
-                padding-top: 75px;
-                text-align: center;
+                text-align: left;
                 font-family: 'Roboto', sans-serif;
             }}
 
             p {{
-                width: 500px;
-                color: #888;
+                color: #000;
+                width: 540px;
                 display: block;
                 margin: 0 auto;
-                text-align: center;
-                padding-bottom: 40px;
+                font-size: 14px;
+                text-align: left;
+                padding-bottom: 20px;
                 font-family: 'Roboto', sans-serif;
+            }}
+
+            hr {{
+                border: 0;
+                padding: 0 0 15px 0;
+                width: 100%;
+                height: 1px;
+                opacity: 0.5;
+                display: block;
+                margin: 0 auto;
+                border-top: 1px solid #aeaeae;
+            }}
+
+            label {{
+                font-size: 14px;
+                color: #aeaeae;
             }}
 
             input[type=text], select {{
@@ -76,24 +107,49 @@ form = """
                 background-color: #336B87;
             }}
 
+            .footer {{
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                position: absolute;
+            }}
+
+            .footer p {{
+                color: #aeaeae;
+                text-align: center;
+                padding: 35px 0 0 0;
+            }}
+
         </style>
 
     </head>
 
     <body>
 
-        <h1>Web Caesar</h1>
-        <p>A web application that utilizes the caesar cipher. Type in a message and the amount of rotation to encrypt your message!</p>
+        <div class="wrapper">
 
-        <form action ="/" method="POST">
-            <label for "rot">Rotate by:</label>
-            <input type="text" id="rot" name="rot" value="0">
-            <textarea name="text">{0}</textarea>
-            <input type="submit" value="Encrypt">
-        </form>
+            <h1>&#128274; Web Caesar Cipher</h1>
+
+            <p>A web application that utilizes the caesar cipher. Type in a message and the amount of rotation to encrypt your message!</p>
+
+            <hr>
+
+            <form action ="/" method="POST">
+                <label>Enter Message to Encrypt:</label>
+                <textarea name="text">{0}</textarea>
+                <label for "rot">Enter Amount to Rotate:</label>
+                <input type="text" id="rot" name="rot" value="0">
+                <input type="submit" value="Encrypt">
+            </form>
+
+        </div>
+
+        <div class="footer">
+            <p class="footer">Created using Python and Flask. Designed by Bill Phan.</p>
+        </div>
 
     </body>
-
 </html>
 """
 
