@@ -50,6 +50,7 @@ form = """
                 width: 100%;
                 height: 150px;
                 margin: 8px 0;
+                font-size: 14px;
                 border-radius: 4px;
                 padding: 12px 20px;
                 border: 1px solid #ccc;
@@ -134,7 +135,7 @@ form = """
                 text-align: center;
                 padding: 35px 0 0 0;
             }}
-            
+
         </style>
 
     </head>
@@ -151,8 +152,7 @@ form = """
                 <hr>
 
                 <form class="cipher-form" action ="/" method="POST">
-                    <label>Enter Message to Encrypt:</label>
-                    <textarea name="text">{0}</textarea>
+                    <textarea name="text" placeholder="Enter Message to Encrypt:">{0}</textarea>
                     <label for "rot">Enter Amount to Rotate:</label>
                     <input type="text" id="rot" name="rot" value="0">
                     <input type="submit" value="Encrypt">
