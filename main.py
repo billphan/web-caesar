@@ -50,7 +50,7 @@ form = """
                 width: 100%;
                 height: 150px;
                 margin: 8px 0;
-                font-size: 14px;
+                font-size: 12px;
                 border-radius: 4px;
                 padding: 12px 20px;
                 border: 1px solid #ccc;
