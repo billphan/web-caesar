@@ -68,7 +68,7 @@ form = """
                 color: #000;
                 display: block;
                 margin: 0 auto;
-                font-size: 14px;
+                font-size: 16px;
                 text-align: left;
                 font-weight: 200;
                 padding-bottom: 20px;
