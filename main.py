@@ -6,7 +6,6 @@ app.config['DEBUG'] = True
 
 form = """
 <!DOCTYPE html>
-
 <html>
 
     <head>
@@ -135,7 +134,7 @@ form = """
                 text-align: center;
                 padding: 35px 0 0 0;
             }}
-
+            
         </style>
 
     </head>
@@ -147,19 +146,16 @@ form = """
             <div class="inner-wrapper">
 
                 <h1>Caesar Cipher</h1>
-
                 <p>A web caesar cipher application! Type in a message and the amount of rotation to see your message encrypted!</p>
 
                 <hr>
 
                 <form class="cipher-form" action ="/" method="POST">
-                
                     <label>Enter Message to Encrypt:</label>
                     <textarea name="text">{0}</textarea>
                     <label for "rot">Enter Amount to Rotate:</label>
                     <input type="text" id="rot" name="rot" value="0">
                     <input type="submit" value="Encrypt">
-
                 </form>
 
             </div>
