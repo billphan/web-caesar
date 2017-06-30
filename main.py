@@ -11,22 +11,31 @@ form = """
 
     <head>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400" rel="stylesheet">
+
         <style>
 
             body {{
                 background-color: #fff;
             }}
 
-            div.wrapper {{
-                top: 40%;
+            .wrapper {{
+                top: 45%;
                 left: 50%;
-                width: 540px;
+                width: 600px;
+                height: 600px;
                 display: block;
                 margin: 0 auto;
                 position: fixed;
+                box-shadow: 0px 2px 25px #eee;
                 transform: translate(-50%, -50%)
+            }}
+
+            .inner-wrapper {{
+                width: 475px;
+                display: block;
+                margin: 0 auto;
+                padding-top: 50px;
             }}
 
             form {{
@@ -49,19 +58,19 @@ form = """
             }}
 
             h1 {{
-                color: #336B87;
-                font-weight: 300;
+                color: #2A3132;
+                font-weight: 100;
                 text-align: left;
                 font-family: 'Roboto', sans-serif;
             }}
 
             p {{
                 color: #000;
-                width: 540px;
                 display: block;
                 margin: 0 auto;
                 font-size: 14px;
                 text-align: left;
+                font-weight: 200;
                 padding-bottom: 20px;
                 font-family: 'Roboto', sans-serif;
             }}
@@ -78,8 +87,9 @@ form = """
             }}
 
             label {{
-                font-size: 14px;
                 color: #aeaeae;
+                font-size: 14px;
+                font-weight: 300;
             }}
 
             input[type=text], select {{
@@ -104,7 +114,12 @@ form = """
             }}
 
             input[type=submit]:hover {{
-                background-color: #336B87;
+                background-color: #aeaeae;
+                transition: 0.25s ease-in-out;
+                -o-transition: 0.25s ease-in-out;
+                -ms-transition: 0.25s ease-in-out;
+                -moz-transition: 0.25s ease-in-out;
+                -webkit-transition: 0.25s ease-in-out;
             }}
 
             .footer {{
@@ -129,24 +144,30 @@ form = """
 
         <div class="wrapper">
 
-            <h1>&#128274; Web Caesar Cipher</h1>
+            <div class="inner-wrapper">
 
-            <p>A web application that utilizes the caesar cipher. Type in a message and the amount of rotation to encrypt your message!</p>
+                <h1>Caesar Cipher</h1>
 
-            <hr>
+                <p>A web caesar cipher application! Type in a message and the amount of rotation to see your message encrypted!</p>
 
-            <form action ="/" method="POST">
-                <label>Enter Message to Encrypt:</label>
-                <textarea name="text">{0}</textarea>
-                <label for "rot">Enter Amount to Rotate:</label>
-                <input type="text" id="rot" name="rot" value="0">
-                <input type="submit" value="Encrypt">
-            </form>
+                <hr>
+
+                <form class="cipher-form" action ="/" method="POST">
+                
+                    <label>Enter Message to Encrypt:</label>
+                    <textarea name="text">{0}</textarea>
+                    <label for "rot">Enter Amount to Rotate:</label>
+                    <input type="text" id="rot" name="rot" value="0">
+                    <input type="submit" value="Encrypt">
+
+                </form>
+
+            </div>
 
         </div>
 
         <div class="footer">
-            <p class="footer">Created using Python and Flask. Designed by Bill Phan.</p>
+            <p class="footer">Created using Python, Flask, &amp; designed by Bill Phan</p>
         </div>
 
     </body>
